@@ -11,6 +11,6 @@ RUN echo "[icinga2_default]" >> /etc/carbon/storage-schemas.conf
 RUN echo "pattern = ^icinga2\." >> /etc/carbon/storage-schemas.conf
 RUN echo "retentions = 5m:10d,30m:90d,360m:4y" >> /etc/carbon/storage-schemas.conf
 
-CMD /usr/bin/python /usr/bin/carbon-cache --nodaemon --config=/etc/carbon/carbon.conf
+CMD /usr/bin/python /usr/bin/carbon-cache --nodaemon --config=/etc/carbon/carbon.conf start
 
 VOLUME /var/lib/graphite
